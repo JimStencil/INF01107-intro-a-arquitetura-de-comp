@@ -1,0 +1,13 @@
+Símbolo         Valor Decimal   Valor Hexadecimal
+-------         -------------   -----------------
+INICIO                      0                   0
+LOOP                       16                  10
+FIM                        40                  28
+A                         128                  80
+B                         129                  81
+M                         130                  82
+N                         131                  83
+C0                        132                  84
+C1                        133                  85
+X                         134                  86
+Y                         135                  87

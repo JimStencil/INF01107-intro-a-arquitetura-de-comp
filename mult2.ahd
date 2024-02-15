@@ -1,0 +1,39 @@
+; multiplicação por 2
+
+inicio: 
+	LDA c0  ; primeiro zera os valores de b (ambos + significativo e - significativo)
+	STA b0
+	STA b1
+	LDA a0 ; guardando nas variaveis auxiliares x0 e x1 para nao perder o valor de A 
+	STA x0
+	LDA a1
+	STA x1
+	LDA n  ; guardando na variavel auxiliar n1 para nao perder o valor em n
+	STA n1
+
+loop:	
+	LDA n1
+	SUB c1
+	STA n1
+	JN fim  ; é menor que zero?
+	LDA x0
+	SHL     ; mult por 2
+	STA x0
+	LDA x1
+	ROL     ; rotaciona os bits da parte + significativa (pode ter ocorrido carry ou nao) 
+	STA x1
+	JMP loop
+fim:	HLT
+
+ORG 128
+
+a0: DB
+a1: DB
+b0: DB
+b1: DB
+x0: DB
+x1: DB
+c0: DB 0
+c1: DB 1
+n: DB
+n1: DB

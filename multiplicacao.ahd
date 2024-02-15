@@ -1,0 +1,35 @@
+; multiplicações por somas sucessivas
+
+inicio: LDA c0
+	STA M  ; zerando valores
+	STA N
+	LDA B  ; guardando nas variaveis auxiliares para nao perder o valor em A e B
+	STA Y
+	LDA A  
+	STA X  
+	STA N
+
+loop:	LDA Y
+	SUB c1
+	STA Y
+	JZ fim  ; é zero?
+	LDA N
+	ADD X
+	STA N
+	JNC loop ; deu carry?
+	LDA M
+	ADD c1   ; add 1
+	STA M
+	JMP loop
+fim:	HLT
+
+ORG 128
+
+A: DB
+B: DB
+M: DB
+N: DB
+c0: DB 0
+c1: DB 1
+X: DB
+Y: DB
