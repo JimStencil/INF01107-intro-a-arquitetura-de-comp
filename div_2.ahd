@@ -1,0 +1,14 @@
+ORG 128
+
+	a: DB 5 ; define a variavel a, coloca o valor inicial 10
+	b: DB
+	c: DB
+ORG 0
+
+	LDA a
+	SHR
+	STA b
+	LDA a
+	SUB b
+	STA c
+	HLT	; termina o programa

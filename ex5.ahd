@@ -1,0 +1,9 @@
+ORG 128
+
+	a: DB 7 ; define a variavel a, coloca o valor 7 
+	b: DB 251; define variavel b, coloca valor -5
+ORG 0
+
+	LDA a
+	ADD b
+	HLT

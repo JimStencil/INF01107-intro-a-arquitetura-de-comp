@@ -1,0 +1,16 @@
+ORG 128
+
+	a: DB 10 ; define a variavel a, coloca o valor inicial 10
+	b: DB 10 ; define a variavel b, sem valor inicial
+	c: DB 
+	d: DB 1
+ORG 0
+
+	LDA a
+	SUB b
+	JNZ nao_iguais	
+	LDA c
+	ADD d
+	STA c
+nao_iguais:
+	HLT	; termina o programa

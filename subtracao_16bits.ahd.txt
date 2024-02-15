@@ -1,0 +1,23 @@
+ORG 0
+
+	LDA a_baixo
+	SUB b_baixo
+	STA c_baixo
+	LDA a_alto
+	JNB nao_borrow
+	SUB constante_um
+nao_borrow:
+	SUB b_alto 
+	STA c_alto
+	HLT
+
+
+ORG 128
+
+a_alto: DB 1
+a_baixo: DB 128
+b_alto: DB 1
+b_baixo: DB 129
+c_alto: DB 
+c_baixo: DB 
+constante_um: DB 1

@@ -1,0 +1,27 @@
+ORG 128
+
+	a1: DB 0 ; define a variavel a, coloca o valor inicial 
+	a0: DB 8 ; define a variavel a, coloca o valor inicial 8
+	b1: DB
+	b0: DB
+ORG 0
+
+	LDA a1
+	SHR
+	 STA b1
+	LDA a0
+	ROR
+	STA b0
+	LDA b1
+	SHR
+	STA b1
+	LDA b0
+	ROR
+	STA b0
+	LDA b1
+	SHR
+	STA b1
+	LDA b0
+	ROR
+	STA b0
+	HLT	; termina o programa
