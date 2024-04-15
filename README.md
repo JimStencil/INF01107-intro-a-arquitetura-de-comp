@@ -1,0 +1,1 @@
+Alguns arquivos da disciplina INF01107 - INTRODUÇÃO À ARQUITETURA DE COMPUTADORES (2023-2)
